@@ -110,6 +110,27 @@ int main()
   printf("\n%d", fat);
   return 0;
 }
+Questão 7
+#include <stdio.h> 
+#include <math.h>
+
+int main(){
+    int fat, n, i, aux;
+    n = 15;
+    aux = n;
+    for(i = n; i > 0; i--){
+        if(n < 10) return 0;
+        else{
+            for(fat = 1; n > 1; n = n - 1)fat = fat * n;
+            printf("\nFatorial de %d eh: %d",aux, fat);
+            aux = aux - 1;
+            n = aux;
+        }
+    }
+    return 0;
+}
+
+//irá ocorrer um erro caso o fatorial seja um inteiro, pra solucionar precisa alterar seu valor para long long int e corrigirá o programa
 Questão 8
 void calcular(int *vetor, int n, float *m, float *dp){
     int i;
